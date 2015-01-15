@@ -1,0 +1,26 @@
+@charset "utf-8";
+*{margin:0px;padding:0px;list-style:none;}
+html {height:100%;}
+body{font-size:12px; font-family:Verdana,宋体;PADDING-RIGHT: 0px; PADDING-LEFT: 0px; SCROLLBAR-FACE-COLOR: #e9f1f7; PADDING-BOTTOM: 0px; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #bcd4e5; SCROLLBAR-ARROW-COLOR: #2c5784; PADDING-TOP: 0px; SCROLLBAR-TRACK-COLOR: #e9f1f7; SCROLLBAR-DARKSHADOW-COLOR: #bcd4e5; SCROLLBAR-BASE-COLOR: #000000; margin:8px 0px 0px 8px;}
+table,td{font-size:12px; font-family:Verdana,宋体;line-height:180%}
+a{text-decoration:none}
+a:link {text-decoration: none; color: #000000;}
+a:visited {text-decoration: none;color: #000000;}
+a:hover {text-decoration: none; color: #900900;}
+a.active{TEXT-DECORATION: none; COLOR: #000000;}
+TABLE.Form {border:1px solid #b7c4d4;border-bottom:0px solid #b7c4d4;width:100%;}
+TABLE.Form TH{height:35px;line-height:35px;border-bottom:solid 1px #b7c4d4;background-color:#e2e7ef;text-align:left;padding-left:5px;font-weight:bolder}
+TABLE.Form TD {border-bottom:solid 1px #b7c4d4;height:35px;line-height:35px;padding-left:5px;padding-right:5px}
+TABLE.Form TH.Right,TD.Right{border-right:solid 1px #b7c4d4;}
+TABLE.Form TD A:link {COLOR: #000000; TEXT-DECORATION: none}
+TABLE.Form TD A:visited {COLOR: #000000; TEXT-DECORATION: none}
+TABLE.Form TD A:hover {COLOR: #ff0000; TEXT-DECORATION: underline}
+TABLE.Form TD A:active{ COLOR: #000000;TEXT-DECORATION: none;}
+TABLE.Form TD .Input300px{width:300px;height:25px; line-height:25px; border:solid 1px #cccccc}
+TABLE.Form TD .Input200px{width:200px;height:25px; line-height:25px; border:solid 1px #cccccc}
+TABLE.Form TD .Button{background:url(../Images/Buttom_Bg1.gif);width:72px; height:20px; border:0px; color:#395366}
+.cell_title{height:30px;text-align: center;background-color:#b4cad5; padding:3px}
+.cell_left{line-height:20px;height:150%;text-align: left;background-color: #f7fafb;padding:3px}
+.cell_right{line-height:20px;height:150%;background-color: #f7fafb;text-align: right;padding:3px;}
+.cell_center{height:28px;text-align: center;background-color: #f7fafb;padding:3px}
+.float_left_25{float:left;width:25%}

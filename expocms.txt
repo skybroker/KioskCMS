@@ -1,0 +1,6 @@
+ExpoCMS是专门为展览会设计的一个款cms系统。采用较为成熟的ASP+ACCESS编写、DIV+CSS布局、jquery类库，access数据库架构，简单好用、易于部署、扩展，能满足展会基本的宣传展示、信息发布功能，同时系统开放全部源码，用户可以根据自己的需求扩展出自己需求的模块，如：栏目信息、新闻分类、新闻信息、观众/展商预登记、后台管理员账户管理等。整套系统的设计构造，完全考虑展览会行业类网站的功能要求，网站的后台功能强大，管理简洁，欢迎大家使用。
+演示站点：http://expo.zhujianqiang.com
+后台地址：您的网址/admin/admin_login.asp
+账户：admin
+密码：admin
+下载地址：http://www.zhujianqiang.com/Download/expocms20101026.rar
