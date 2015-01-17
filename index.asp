@@ -1,55 +1,66 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>自助终端</title>
-	<link rel="shortcut icon" href="./favicon.ico">
-	<link rel="stylesheet" href="./css/themes/default/jquery.mobile-1.4.5.min.css">
-	<script src="./js/jquery.min.js"></script>
-	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
-	<style>
-		.ui-content {
-			max-width: 600px;
-			margin: auto;
-		}
-		body {
-			background-position: left top;
-			background-image: url(images/home_bg.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-attachment: fixed;
-		}
-		.jqm-demos {
-			background-color: transparent !important;
-		}
-		li a {
-			font-size: 1.4em !important;
-			background-color: yellow;
-		}
-		h1 {
-			font-family: 微软雅黑, 宋体 !important;
-			font-size: 3em !important;
-			text-align: center;
-		}
-    </style>
-</head>
-<body>
-<div data-role="page" class="jqm-demos" data-quicklinks="true">
-	<div role="main" class="ui-content jqm-content">
-		<h1>自助系统</h1>
-		<ul data-role="listview" data-inset="true">
-			<li><a href="#">排队叫号</a></li>
-			<li><a href="#">气费查询</a></li>
-			<li><a href="newslist.asp?id=1" target="_self">新闻杂志</a></li>
-			<li><a href="#">产品介绍</a></li>
-			<li><a href="#">热门链接</a></li>
-		</ul>
-	</div>
-<!--
-<p align="center"><a href="./admin/login.asp">进入后台</a></p>
--->
-</div><!-- /page -->
-
-</body>
-</html>
+﻿<!--#include File="Config/Config.asp"-->
+<!--#include File="Include/Class_Function.asp"-->
+<%
+title	=	"首页"	'页面title
+call showhead()		'-----显示头部导航
+NavParent	=	1
+%>
+  <div id="content">
+    <div class="left">
+      <%call showleft()%>
+    </div>
+    <div class="right">
+      <div class="banner"><img src="images/banner.jpg" width="675" height="100" border="0" alt="<%=SiteName%>"/></div>
+      <div class="indexcontent">
+        <div class="about">
+          <div class="linetitle">展会概况</div>
+          <div class="contacts">
+<%
+'------------------------------------------------------------------------------
+Set Rs=Server.CreateObject("Adodb.RecordSet")
+Sql = "Select NavContent From SiteExplain Where ID=2"
+Rs.Open Sql,Conn,1,1
+If Not (Rs.Eof Or Rs.Bof ) Then
+	NavContent=	Rs("NavContent")
+End If
+Rs.Close
+set rs = nothing
+SubNavContent	=	CutStr(NavContent,300)
+response.Write(SubNavContent)
+'-----------------------------------------------------------------------------
+%>
+          </div>
+          <div class="linetitle">展会图片</div>
+					<div class="contacts">
+<%
+	sqlstr = "select top 8 id,NewsTitle,PostTime,NewsSPic,NewsBPic from NewsInfo where ClassID in (2,3) and  NewsLock=0 order by NewsOrder desc "
+	set rs=server.CreateObject("adodb.recordset")
+	rs.open sqlstr,conn,1,1
+		do until rs.eof
+		id				=	rs("id")
+		NewsTitle	=	rs("NewsTitle")
+		PostTime	=	formatdatetime(rs("PostTime"),2)
+		NewssPic	=	rs("NewssPic")
+		NewsBPic	=	rs("NewsBPic")
+		subNewsTitle	=	CutStr(NewsTitle,10)
+%> 
+  <dl>
+    <dt><img alt="<%=NewsTitle%>" src="<%=NewssPic%>" border="0" /></dt>
+    <dd><a href="news.asp?id=<%=id%>" target="_blank"><%=NewsTitle%></a></dd>
+  </dl>
+<%
+		rs.movenext
+		loop
+	rs.close
+	set rs = nothing
+%>		            
+          </div>					
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+<%
+'------显示页面尾部--
+call showfoot()
+%>
