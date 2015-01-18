@@ -38,6 +38,7 @@ title	=	NewsTitle	'页面title
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="./js/idle-timer.min.js"></script>
+	<script src="./js/newsviewer.js"></script>
 	<style>
 		.ui-content {
 			max-width: 1024px;
@@ -87,26 +88,11 @@ title	=	NewsTitle	'页面title
         </div>
      </div>
      <div class="scroll-bar">
-     	<div><a href="#" class="touch-element ui-btn" data-rel="back">返回</a></div>
-     	<div><a href="#" class="touch-element scroll-up ui-btn">向上滚动</a></div>
-     	<div><a href="#" class="touch-element scroll-down ui-btn">向下滚动</a></div>
+     	<div><a href="#" class="kiosk-element ui-btn" data-rel="back">返回</a></div>
+     	<div><a href="#" class="kiosk-element scroll-up ui-btn">向上滚动</a></div>
+     	<div><a href="#" class="kiosk-element scroll-down ui-btn">向下滚动</a></div>
      </div>
   </div>
 </body>
 <script src="./js/idle-back-home.js"></script>
-<script>
-$(function(){
-	$(".scroll-up").on("click", function(){
-		window.scrollBy(0, -$(window).height() * 0.9);
-	});
-	$(".scroll-down").on("click", function(){
-		window.scrollBy(0, $(window).height() * 0.9);
-	});
-});
-$(window).click(function(e){
-	if(!$(e.target).hasClass("touch-element")) {
-		return false;
-	}
-});
-</script>
 </html>

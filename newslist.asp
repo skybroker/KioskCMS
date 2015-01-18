@@ -8,61 +8,21 @@
 	<title>新闻杂志</title>
 	<link rel="shortcut icon" href="./favicon.ico">
 	<link rel="stylesheet" href="./css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="./css/kiosk.css">
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
-	<style>
-		.ui-content, .my-header {
-			max-width: 800px;
-			margin: auto;
-		}
-		body {
-			background-position: left top;
-			background-image: url(images/home_bg.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-attachment: fixed;
-		}
-		.jqm-demos {
-			background-color: transparent !important;
-		}
-		li a {
-			background-color: transparent !important;
-			vertical-align: middle;
-			border-left: none !important;
-			border-right: none !important;
-		}
-		li a img {
-			height: 60px;
-			margin-top: 10px;
-		}
-		.main_title {
-			background-color: transparent !important;
-			border: none;
-			min-height: 1em !important;
-		}
-		.main_title h3 {
-			font-family: 微软雅黑, 宋体 !important;
-			font-size: 2em !important;
-			text-align: center;
-			padding: 0 !important;
-			display: inline-block;
-		}
-		.nav_bar {
-			text-align: center;
-		}
-	</style>
 </head>
 <body>
-<div data-role="page" class="jqm-demos" data-quicklinks="true">
-	<div role="main" class="ui-content jqm-content">
-	<div data-role="header" class="main_title">
-	    <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back" data-rel="back">返回</a>
+<div data-role="page" class="jqm-demos" ><!-- data-quicklinks="true" -->
+	<div data-role="header" class="my-header-800 main_title">
+	    <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back" id="btn_back" data-rel="back">返回</a>
 			<h3>新闻杂志</h3>
 			<!--
 	    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Save</button>
 			-->
 	</div>
-<ul data-role="listview" data-inset="true">
+	<div role="main" class="ui-content-800">
+<ul data-role="listview" class="news-list" data-inset="true">
 <%
 ClassID	=	trim(request.QueryString("ID"))
 if not IsNumeric(ClassID) and ClassID<>"" then
