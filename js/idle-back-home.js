@@ -10,7 +10,7 @@ jQuery.fn.center = function() {
 function countDown() {
 	if(!bContinue)
 		return;
-	$("#count-down-seconds").text(nCountDown);
+	$(".count-down-seconds").text(nCountDown);
 	if(nCountDown < 1) {
 		top.location.href = "default.asp";
 	}
@@ -22,14 +22,15 @@ function countDown() {
 function startCountDown() {
 	nCountDown = COUNT_DOWN;
 	bContinue = true;
-	$("#closing-panel").center().fadeIn(1000);
+	$(".idle-page-closing-panel").center().fadeIn(1000);
 	countDown();
 }
 function stopCountDown() {
-	$("#closing-panel").hide();
+	$(".idle-page-closing-panel").hide();
 	bContinue = false;
 }
 $(function(){
+	$(document.body).append("<div class='idle-page-closing-panel'>用户无操作，<span class='count-down-seconds'>10</span>秒后返回主页!</div>");
 	var idleTimeout = 30000;
 	$(document).bind("idle.idleTimer",function(){
 		if(!bContinue) {

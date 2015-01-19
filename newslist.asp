@@ -11,11 +11,12 @@
 	<link rel="stylesheet" href="./css/kiosk.css">
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="./js/idle-timer.min.js"></script>
 </head>
 <body>
 <div data-role="page" class="jqm-demos" ><!-- data-quicklinks="true" -->
 	<div data-role="header" class="my-header-800 main_title">
-	    <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back" id="btn_back" data-rel="back">返回</a>
+	    <a href="/" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back" id="btn_back">返回</a>
 			<h3>新闻杂志</h3>
 			<!--
 	    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Save</button>
@@ -98,4 +99,5 @@ rs.close
 set rs = nothing
 %>
 </body>
+<script src="./js/idle-back-home.js"></script>
 </html>

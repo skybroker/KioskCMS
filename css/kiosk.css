@@ -8,19 +8,23 @@
 .jqm-demos {
 	background-color: transparent !important;
 }
-.ui-content-600 {
-	max-width: 600px;
-	margin: auto;
-}
 .my-header-800 {
 	max-width: 800px;
 	margin: auto;
 	font-size: 1.2em;
 }
+.ui-content-600 {
+	max-width: 600px;
+	margin: auto;
+}
 .ui-content-800 {
 	max-width: 800px;
 	margin: auto;
 	margin-top: 50px;
+}
+.ui-content-1024 {
+	max-width: 1024px;
+	margin: 0 auto 0 auto;
 }
 .main-function-list a {
 	background-color: transparent !important;
@@ -63,4 +67,28 @@
 }
 #btn_back {
 	margin-top: 2em;
+}
+.idle-page-closing-panel {
+	display: none;
+	background-color: #eeeeee;
+	padding: 2em;
+	z-index: 999;
+}
+.scroll-panel {
+	position: fixed;
+	left: 10px;
+	top: 20%;
+	width: 100px;
+	height: 200px;
+}
+.scroll-panel a {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background-color: transparent !important;
+	font-size: 1.5em;
+}
+.content-over-panel {
+	font-size: 2em !important;
+	text-align: center;
 }
