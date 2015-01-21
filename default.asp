@@ -18,7 +18,7 @@
 			<li><a href="#">排队叫号</a></li>
 			<li><a href="#">气费查询</a></li>
 			<li><a href="newslist.asp?id=1" target="_self">新闻杂志</a></li>
-			<li><a href="#">产品介绍</a></li>
+			<li><a href="newslist.asp?id=2" target="_self">产品介绍</a></li>
 			<li><a href="#">热门链接</a></li>
 		</ul>
 	</div>

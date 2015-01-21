@@ -4,7 +4,7 @@ and the backend pages are maintained on Desktop browser.
 
 Installation:
 1. Enable "ASP" feature for IIS
-2. Set "Enable Parent Paths" as "True" in IIS
+2. Set "Enable Parent Paths" as "True" in "ASP" module of IIS
 3. Add a new IIS site (not virtual directory)
 
 The front page cloud use the Kiosk Mode of Chrome for fullscreen on os startup.

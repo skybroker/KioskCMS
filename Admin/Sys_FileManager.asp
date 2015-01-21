@@ -1,5 +1,5 @@
 ﻿<!--#include File="CheckLogin.asp"-->
-<!--#include File="../Config/Config2.asp"-->
+<!--#include File="../Config/Config.asp"-->
 <!--#include File="../Include/Class_FSO.asp"-->
 <!--#include File="../Include/Class_System.asp"-->
 <!--#include FILE="../Include/Class_Upload.asp"-->

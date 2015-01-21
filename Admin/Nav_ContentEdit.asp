@@ -1,5 +1,5 @@
 ﻿<!--#include File="CheckLogin.asp"-->
-<!--#include File="../Config/Config2.asp"-->
+<!--#include File="../Config/Config.asp"-->
 <!--#include File="../Include/Class_Function.asp"-->
 <%
 Call ISPopedom(UserName,"Nav_Content")

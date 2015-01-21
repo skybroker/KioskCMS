@@ -18,8 +18,8 @@ hk=0
 End If
 Dim Conn
 Dim ConnStr
-ConnStr="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & Server.MapPath("./DataBase/#DataBase#.mdb")
-'Response.write connstr
+ConnStr="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & Server.MapPath("/DataBase/#DataBase#.mdb")
+'Response.write Err.Number &","& connstr
 'Response.end
 Set Conn=Server.CreateObject("ADODB.Connection")
 ON ERROR RESUME NEXT
@@ -31,7 +31,8 @@ Err.Clear
 	On Error Goto 0
 	'' it is x64
 	providerStr = "Microsoft.ACE.OLEDB.12.0"
-	conn.open "provider="& providerStr &"; data source=" & Server.MapPath("./DataBase/#DataBase#.mdb")
+	ConnStr="provider="& providerStr &"; data source=" & Server.MapPath("/DataBase/#DataBase#.mdb")
+	conn.open ConnStr
 
 	if Err.Number<>0 then
 	Err.Clear
