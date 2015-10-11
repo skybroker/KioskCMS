@@ -31,15 +31,20 @@
 	vertical-align: middle;
 	border-left: none !important;
 	border-right: none !important;
-	font-family: 微软雅黑, 宋体 !important;
-	font-size: 1.5em !important;
+	font-family: "幼圆", 微软雅黑, 宋体 !important;
+	font-size: 2em !important;
+	color: blue !important;
+}
+.main-function-list h2 {
+	text-align: center;
+	font-size: 1em !important;
 }
 .news-list a {
 	background-color: transparent !important;
 	vertical-align: middle;
 	border-left: none !important;
 	border-right: none !important;
-	font-family: 微软雅黑, 宋体 !important;
+	font-family: "幼圆", 微软雅黑, 宋体 !important;
 }
 .news-list a img {
 	height: 60px;
@@ -51,16 +56,20 @@
 	min-height: 1em !important;
 }
 .main_title h1 {
-	font-family: 微软雅黑, 宋体 !important;
+	font-family: "幼圆", 微软雅黑, 宋体 !important;
 	font-size: 3em !important;
 	text-align: center;
+	color: red !important;
 }
 .main_title h3 {
-	font-family: 微软雅黑, 宋体 !important;
-	font-size: 2em !important;
+	font-family: "幼圆", 微软雅黑, 宋体 !important;
+	font-size: 3em !important;
 	text-align: center;
 	padding: 0 !important;
 	display: inline-block;
+}
+.main_title a {
+	text-decoration: none;
 }
 .nav_bar {
 	text-align: center;
@@ -91,4 +100,55 @@
 .content-over-panel {
 	font-size: 2em !important;
 	text-align: center;
+}
+#wait_msg {
+	display: none;
+	background-color: lightgray;
+	text-align: center;
+	width: 200px;
+	padding: 40px;
+	position: absolute;
+}
+#wait_msg p {
+	font-size: 2em;
+	font-weight: 900;
+}
+@media screen and (orientation:portrait) {
+body {
+	background-image: url(../images/bg_portrait.jpg);
+}
+.main_title {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main-function-list {
+	position: relative;
+	width: 200px;
+	top: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title-space{
+	height: 450px;
+}
+}
+@media screen and (orientation:landscape) {
+body {
+	background-image: url(../images/bg_landscape.jpg);
+}
+.main_title {
+	position: absolute;
+	width: 300px;
+	right: 50px;
+	top: 150px;
+}
+.main-function-list {
+	position: absolute;
+	right: 100px;
+	top: 300px;
+}
+.title-space{
+	height: 100px;
+}
 }
